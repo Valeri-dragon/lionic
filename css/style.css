@@ -29,12 +29,41 @@ input {
 img {
   max-width: 100%;
 }
-
+@font-face{
+  font-family: 'OpenSans';
+  src: local('OpenSans-Regular'), url('../fonts/OpenSansRegular.woff2') format("woff2"),
+  url(../fonts/OpenSansRegular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face{
+  font-family: 'OpenSans';
+  src: local('OpenSans-Light'), url('../fonts/OpenSansLight.woff2') format("woff2"),
+  url(../fonts/OpenSansLight.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face{
+  font-family: 'OpenSans';
+  src: local('OpenSans-SemiBold'), url('../fonts/OpenSansSemiBold.woff2') format("woff2"),
+  url(../fonts/OpenSansSemiBold.woff) format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   min-width: 1200px;
-  font-family: "font", sans-serif;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #787878;
 }
-
+h1, h2, h3, h4, h5, h6{
+  color:#1c1c1c;
+}
 /*glob*/
 .list-reset {
   margin: 0;
@@ -54,9 +83,9 @@ body {
 }
 
 .container {
-  width: 1200px;
-  padding: 0 15px;
   margin: 0 auto;
+  padding: 0 15px;
+  width: 1200px;
 }
 
 .section-offset {
@@ -67,16 +96,31 @@ body {
 .section-title {
   margin: 0;
   margin-bottom: 40px;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 130%;
+  color:#1c1c1c;
 }
 
 .section-descr {
   margin: 0;
   margin-bottom: 50px;
+ }
+.btn{
+  padding: 15px 35px;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #3172B9;
+  cursor: pointer;
 }
-
 /*header*/
 .header {
   padding: 36px 0;
+  border-bottom: 1px solid #c4c4c4;
+  background-color: #ffffff;
 }
 
 .header-container {
@@ -94,35 +138,61 @@ body {
 .header-list-item:not(:last-child) {
   margin-right: 52px;
 }
-
+.heder-link{
+  font-size: 15px;
+  font-weight: 600;
+  color: #1c1c1c;
+}
 /*hero*/
 .hero {
-  padding: 100px 0;
-  background: url(../img/hero_bg.jpg) no-repeat;
+  padding: 100px 0 150px;
+  background-image: url(../img/hero_bg.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .hero-content {
-  max-width: 50%;
   flex-direction: column;
   align-items: flex-start;
+  max-width: 50%;
 }
 
 .hero-title {
   margin: 0;
   margin-bottom: 26px;
+  font-size: 40px;
 }
 
 .hero-descr {
   margin: 0;
   margin-bottom: 34px;
+  max-width: 471px;
+  line-height: 155%;
 }
-
+.hero-wrapper{
+  flex-direction: column;
+  align-items:center;
+}
 .hero-btn {
   margin-bottom: 14px;
+  padding: 20px 20px; 
+  min-width: 250px;
 }
-
+.hero-secure{
+  padding-left: 30px;
+  font-size: 11px;
+  line-height: 155%;
+  text-transform: uppercase;
+  background-image: url(../img/secure.svg);
+  background-position: left center;
+  background-repeat: no-repeat;  
+  background-size: 14px 17px;
+}
 /*services*/
+.services{
+  border-bottom: 1px solid #dadada;
+}
 .services-title {
   text-align: center;
 }
@@ -134,9 +204,10 @@ body {
 .services-item {
   flex-direction: column;
   align-items: center;
-  padding: 30px;
+  padding: 60px 30px;
   width: 270px;
-  outline: 1px solid #e4e4e4;
+  border: 1px solid #e4e4e4;
+  border-radius:5px;
 }
 
 .services-item:not(:nth-child(4n)) {
@@ -150,19 +221,24 @@ body {
 .services-item-title {
   margin: 0;
   margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
 }
 
 .services-item-descr {
   margin: 0;
   text-align: center;
+  font-size: 14px;
+  line-height: 150%;
 }
 /*articles*/
 .articles-list {
   flex-wrap: wrap;
 }
 .articles-item {
-  width: 570px;
   margin-bottom: 30px;
+  width: 570px;
   outline: 1px solid #e4e4e4;
 }
 .articles-item:not(:nth-child(2n)) {
@@ -188,9 +264,9 @@ body {
 /*clients*/
 .clients-item {
   flex-direction: column;
-  width: 370px;
   padding: 50px 36px;
   padding-bottom: 30px;
+  width: 370px;
   outline: 1px solid #e4e4e4;
 }
 .clients-item:not(:nth-child(3n)) {
@@ -206,8 +282,8 @@ body {
 }
 .clients-avatar {
   flex-shrink: 0;
-  width: 67px;
   margin-right: 17px;
+  width: 67px;
 }
 .clients-name {
   margin-bottom: 5px;
@@ -222,7 +298,6 @@ body {
 .contacts-item {
   flex-direction: column;
   align-items: flex-start;
-
   width: 370px;
 }
 .contacts-item:not(:nth-child(3n)) {
