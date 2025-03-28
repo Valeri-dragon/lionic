@@ -51,8 +51,9 @@
             nonummy nibh euismod tincidunt ut&nbsp;laoreet dolore.
           </p>
           <div class="flex hero-wrapper"><button class="btn-reset btn hero-btn">FREE 30&nbsp;DAY TRIAL</button>
-          <span class="hero-secure"> SSL secured connection </span></div>
-          
+            <span class="hero-secure"> SSL secured connection </span>
+          </div>
+
         </div>
       </div>
     </section>
@@ -271,32 +272,42 @@
       </div>
     </section>
     <section class="join-us section-offset" id="join-us">
-<div class="container">
-  <h2 class="section-title join-us-title">Join us</h2>
-  <p class="section-descr join-us-descr">
-Take control of&nbsp;your paid subscriptions today!
-  </p>
-  <form action="https://jsonplaceholder.typicode.com/posts" method="POST"  class="form">
-<div class="form-top flex">
-  <div class="form-left flex">
-    <input type="text" name="name" id="" placeholder="Name" required>
-    <input type="email" name="email" id="" placeholder="Email" required>
-    <input type="tel" name="phone" id="" placeholder="Phone" required>
-    <select name="country" id="">
-      <option value="United Kingdom">United Kingdom</option>
-      <option value="United States">United States</option>
-      <option value="France">France</option>
-      <option value="Germany">Germany</option>
-      <option value="Spain">Spain</option>
-      <option value="Estonia">Estonia</option>
-    </select>
-  </div>
-  <div class="form-right"><textarea name="comment" id="" placeholder="Comment"></textarea></div>
-</div>
+      <div class="container">
+        <h2 class="section-title join-us-title">Join us</h2>
+        <p class="section-descr join-us-descr">
+          Take control of&nbsp;your paid subscriptions today!
+        </p>
+        <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="form">
+          <div class="form-top flex">
+            <div class="form-left flex">
+              <input class="form-input" type="text" name="name" placeholder="Name" required>
+              <input class="form-input" type="email" name="email" placeholder="Email" required>
+              <input class="form-input" type="tel" name="phone" placeholder="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                title="Format: 123-456-7890" required>
+              <select class="form-input form-select" name="country">
+                <option value="Country" disabled selected>Country</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="United States">United States</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="Spain">Spain</option>
+                <option value="Estonia">Estonia</option>
+              </select>
 
+            </div>
+            <div class="form-right"><textarea class="form-textarea" name="comment" placeholder="Comment"></textarea>
+            </div>
+          </div>
 
-  </form>
-</div>
+          <div class="form-bottom flex">
+            <div class="form-wrapper flex">
+              <button class="btn-reset btn form-btn">get started</button>
+              <label class="form-check"><input type="checkbox" name="agree" required>I agree with the <a href="#">user
+                  agreement</a> </label>
+            </div>
+          </div>
+        </form>
+      </div>
 
     </section>
   </main>
