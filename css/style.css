@@ -418,6 +418,9 @@ h6 {
 }
 
 /*join-us*/
+.join-us{
+  padding-bottom: 122px;
+}
 .join-us-title {
   text-align: center;
   margin-bottom: 20px;
