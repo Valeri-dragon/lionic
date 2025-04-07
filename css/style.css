@@ -285,7 +285,7 @@ h6 {
   background-color: #3172b9;
   color: #ffffff;
 }
-.services__item:hover .services-item-title {
+.services__item:hover .services__item--title {
   color: #ffffff;
 }
 .services__item:hover .services__icon path {
