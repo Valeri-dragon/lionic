@@ -285,13 +285,13 @@ h6 {
   background-color: #3172b9;
   color: #ffffff;
 }
-.services__item:hover .services__item--title {
+.services__item:hover .item__title {
   color: #ffffff;
 }
 .services__item:hover .services__icon path {
   fill: #ffffff;
 }
-.services__item--title {
+.item__title {
   margin: 0;
   margin-bottom: 15px;
   font-size: 20px;
@@ -299,7 +299,7 @@ h6 {
   line-height: 130%;
 }
 
-.services__item--descr {
+.services__item .item__descr {
   margin: 0;
   text-align: center;
   font-size: 14px;
@@ -319,35 +319,36 @@ h6 {
 .articles__item:not(:nth-child(2n)) {
   margin-right: 30px;
 }
-.blog__preview--link {
+.blog__preview .link {
   position: relative;
   width: 100%;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
     border-color 0.3s ease-in-out;
 }
-.blog__preview--link:hover {
-  border-color: #3172b9;
-  background-color: #3172b9;
-  color: #ffffff;
-}
-.blog__preview--link:hover .blog__preview--title {
-  color: #ffffff;
-}
-.blog__preview--link:focus {
+.blog__preview .link:focus {
   border-color: #71a7e2;
   background-color: #71a7e2;
   color: #ffffff;
 }
-.blog__preview--link:focus .blog__preview--title {
+
+.blog__preview .link:focus .title {
+  color: #ffffff;
+}
+.blog__preview .link:hover {
+  border-color: #3172b9;
+  background-color: #3172b9;
+  color: #ffffff;
+}
+.blog__preview .link:hover .title {
   color: #ffffff;
 }
 
-.blog__preview--link:active {
+.blog__preview .link:active {
   border-color: #0e3b6c;
   background-color: #0e3b6c;
   color: #ffffff;
 }
-.blog__preview--link:active .blog__preview--title {
+.blog__preview .link:active .title {
   color: #ffffff;
 }
 .blog__preview {
@@ -356,29 +357,29 @@ h6 {
   overflow: hidden;
 }
 
-.blog__preview--image {
+.blog__preview .image {
   object-fit: cover;
 }
 
-.blog__preview--text {
+.blog__preview .text {
   padding: 30px;
 }
 
-.blog__preview--time {
+.blog__preview .time {
   display: block;
   margin-bottom: 5px;
   font-size: 10px;
   line-height: 150%;
 }
 
-.blog__preview--title {
+.blog__preview .title {
   margin: 0;
   margin-bottom: 15px;
   font-size: 20px;
   line-height: 130%;
 }
 
-.blog__preview--descr {
+.blog__preview .descr {
   margin: 0;
   max-width: 210px;
   font-size: 14px;
@@ -507,12 +508,12 @@ h6 {
 .join__us {
   padding-bottom: 122px;
 }
-.join__us--title {
+.join__us .title {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.join__us--descr {
+.join__us .descr {
   text-align: center;
   margin-bottom: 30px;
 }
