@@ -1,0 +1,59 @@
+@media(max-width: 1200px) {
+
+    .form__input,
+    .form-select {
+        width: 100%;
+    }
+}
+
+@media(max-width: 992px) {
+    .header__nav {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        position: relative;
+        border: 1px solid currentColor;
+        border-radius: 3px;
+        color: #317289;
+        width: 40px;
+        height: 40px;
+    }
+
+    .burger__line {
+        position: absolute;
+        border-radius: inherit;
+        left: 50%;
+        width: 20px;
+        height: 2px;
+        background-color: currentColor;
+        transform: translateX(-50%);
+
+    }
+
+    .burger__line:nth-child(1) {
+        top: 13px;
+    }
+
+    .burger__line:nth-child(2) {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .burger__line:nth-child(3) {
+        bottom: 13px;
+    }
+    .header__btn{
+        padding: 11px 21px;
+        margin-right: 7px;
+    }
+    .hero__content{
+        max-width: 75%;
+    }
+        .services__list {
+            --offsets: 2;
+            /*--offsets отступы между карточками*/
+        }
+
+}
