@@ -348,10 +348,16 @@ h6 {
 .articles__item {
   width: calc((100% - (var(--gap) * var(--offsets))) / (var(--offsets) + 1));
 }
-
+.blog__preview {
+  border: var(--border);
+  border-radius: 5px;
+  overflow: hidden;
+  height: 100%;
+}
 .blog__preview .link {
   position: relative;
   width: 100%;
+  min-height: 100%;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
     border-color 0.3s ease-in-out;
 }
@@ -386,11 +392,7 @@ h6 {
   color: var(--color-wh);
 }
 
-.blog__preview {
-  border: var(--border);
-  border-radius: 5px;
-  overflow: hidden;
-}
+
 
 .blog__preview .image {
   object-fit: cover;
